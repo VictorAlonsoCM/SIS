@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/10/2018, 01:38:50 PM
+    Author     : eherd
+*/
+
+
+
+.menu{
+    margin: 2em 1em 0 1em;
+}
+
+.menuItem{
+    display: flex;
+    flex-direction: row;
+    border: 4px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2%;
+    margin-bottom: 1em;
+}
+
+.iconDiv{
+    padding: 0.5em 0 0.5em 0.5em;
+}
+
+
+.incidentIcon{
+    color:red;
+}
+
+.registerVIcon{
+    color: orange;
+}
+
+.settingIcon{
+    color: #AAA;
+}
+.historyIcon{
+    color:blue;
+}
+
+
+.menuItemText{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.title{
+    margin: 2em 0 2em 0;
+    display: flex;
+    justify-content: center;
+}
+
