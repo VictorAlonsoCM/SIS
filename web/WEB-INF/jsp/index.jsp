@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to Spring Web MVC project</title>
+        <title>Home</title>
         
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
         <style>
             <%@include file="../Resources/css/index.css" %>
         </style>
@@ -24,7 +25,7 @@
         </div>
 
         <div class="menu">
-            <a href="#">
+            <a href="registroIndicente.htm">
                 <div class="menuItem">
                     <div class="col-sm-1 iconDiv">
                         <i class="fas fa-plus-square fa-4x incidentIcon"></i>
