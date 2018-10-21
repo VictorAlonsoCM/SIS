@@ -20,6 +20,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <prop key="testSecondPage.htm">secondPageController</prop>
             </props>
         </property>
     </bean>
@@ -36,7 +37,8 @@
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
     
-    <bean 
-    />
+    
+    <!--    Definindo el bean-->
+    <bean name="secondPageController" class="Controller.secondPageController" />
 
 </beans>
