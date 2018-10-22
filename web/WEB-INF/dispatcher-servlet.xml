@@ -20,7 +20,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="testSecondPage.htm">secondPageController</prop>
+                <prop key="registerPage.htm">registerPageController</prop>
             </props>
         </property>
     </bean>
@@ -39,6 +39,6 @@
     
     
     <!--    Definindo el bean-->
-    <bean name="secondPageController" class="Controller.secondPageController" />
+    <bean name="registerPageController" class="Controller.registerPageController" />
 
 </beans>
