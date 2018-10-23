@@ -24,7 +24,7 @@
         <h4>DESPACHO DE VEHÍCULOS CON GPS QUE ATIENDEN EMERGENCIAS</h4>
         </div>
         
-        <a href="testSecondPage.htm">Go to another page</a>
+        <a href="testSecondPage.htm">Go to another page!</a>
 
         <div class="menu">
             <a href="registroIndicente.htm">
