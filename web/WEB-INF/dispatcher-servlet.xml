@@ -21,6 +21,8 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="registerPage.htm">registerPageController</prop>
+                <prop key="home.htm">homeController</prop>
+                <prop key="registrarVehiculo.htm">homeController</prop>
             </props>
         </property>
     </bean>
@@ -40,5 +42,6 @@
     
     <!--    Definindo el bean-->
     <bean name="registerPageController" class="Controller.registerPageController" />
+    <bean name="homeController" class="Controller.homeController" />
 
 </beans>

@@ -17,6 +17,9 @@ public class Vehiculo {
     private Boolean status;
     private String dispositivomovil_id;
     
+    public Vehiculo(){
+    }
+    
     public Vehiculo(String niv, String tipo, String seriegps, Boolean status) {
         this.niv = niv;
         this.tipo = tipo;

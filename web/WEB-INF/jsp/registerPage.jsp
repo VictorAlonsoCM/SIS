@@ -30,8 +30,10 @@
             <div class="card">
                 <nav class="navbar" role="navigation">
                     <ul class="nav nav-tabs" role="tablist">
+                        
                         <li role="tabs" class="active"><a href="#registroDeIncidente" aria-controls="home" role="tab" data-toggle="tab">Registro de incidente</a></li>
                         <li role="tabs"><a href="#vehiculosDeEmergencia" aria-controls="profile" role="tab" data-toggle="tab">Vehículos de emergencia</a></li>
+                        <li role="tabs"><a href="/home.htm" aria-controls="profile" role="tab" data-toggle="tab">Home</a></li>
                     </ul>
 
                     <!-- Tabs Content -->
@@ -69,9 +71,11 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div role="tabpanel" class="tab-pane" id="vehiculosDeEmergencia">
                             <p>Siguiente vista</p>
                         </div>
+                        
                     </div>
                 </nav>
             </div>
