@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+function changeToLoading(){
+    //To implement later   
+}
 
 function showAlert(){
     alert("btn pressed");
@@ -11,6 +14,7 @@ function showAlert(){
 
 function showModalVehiculoForm(){
     var modalVehiculo = document.getElementById("vehiculoModal");
+    
     modalVehiculo.style.display="block";
 }
 

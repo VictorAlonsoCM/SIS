@@ -161,8 +161,8 @@
                     </div>
 
                     <div class="form-btns">
-                        <button type="button" onclick="hideModalVehiculoForm()" class="btn-danger">Cancelar</button>
-                        <button type="submit" class="btn-primary">Aceptar</button>
+                        <button type="button" onclick="hideModalVehiculoForm()" class="btn btn-danger">Cancelar</button>
+                        <button type="submit" id="RegisterVehiculo" onclick="changeToLoading()" class="btn btn-primary">Aceptar</button>
                     </div>
 
                 </form:form>
@@ -172,11 +172,13 @@
         <c:if test="${success}">
             <div id="successVModal" class="successVInserted">
                 <div class="successVInserted-content">
+                    <h3>Registrar vehículo de emergencia</h3>
+                    <hr>
                     <div class="form-group">
                         <h3> ¡Vehículo de emergencia registrado satisfactoriamente! </h3>
                     </div>
-                    <div clas="form-group">
-                        <button type="buton" class="btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
+                    <div clas="form-btns-success">
+                        <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
                     </div>
                 </div>
             </div>
