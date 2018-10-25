@@ -1,4 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -16,6 +19,7 @@
         
         <style>
             <%@include file="../Resources/css/index.css" %>
+            <%@include file="../Resources/css/vehiculosEmergencia.css" %>
         </style>
         <style>
             <%@include file="../Resources/css/googleMaps.css" %>
@@ -72,8 +76,77 @@
                             </div>
                         </div>
                         
+                        
+                        
+                        
+                        
                         <div role="tabpanel" class="tab-pane" id="vehiculosDeEmergencia">
-                            <p>Siguiente vista</p>
+                            <div class="map col-md-5">
+                                
+                            </div>
+                            
+                            
+                           
+                            <div class="chatDescription col-md-5">
+                                <div class="descIncd">
+                                    <h3>Descripción del Incidente</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Praesent magna lectus, mollis et feugiat a, lobortis at sem. 
+                                        Integer risus est, dapibus non sollicitudin quis, interdum vitae quam. 
+                                        Donec non sem eu odio euismod venenatis
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    <h1>THIS IS A CHAT</h1>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="tab">
+                                
+                                <c:set var="nAmbulancia" scope="session" value="0"/>
+                                <c:set var="nBombero" scope="session" value="0"/>
+                                <c:set var="nPolicia" scope="session" value="0"/>
+                                
+                                <c:forEach items="${vehiculosActivos}" var="vehiculo">
+                                    
+                                    <c:choose>
+                                        
+                                        <c:when test="${vehiculo.tipo=='Ambulancia' }" >
+                                            <c:set var="nAmbulancia" scope="session" value="${nAmbulancia+1}"/>
+                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nAmbulancia} </button>
+                                        </c:when>
+                                            
+                                        <c:when test="${vehiculo.tipo=='Policia' }">
+                                            <c:set var="nPolicia" scope="session" value="${nPolicia+1}"/>
+                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nPolicia} </button>
+                                        </c:when>
+                                            
+                                        <c:when test="${vehiculo.tipo == 'Bomberos' }">
+                                            <c:set var="nBombero" scope="session" value="${nBombero+1}"/>
+                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nBombero} </button>
+                                        </c:when>
+                                            
+                                        
+                                        
+                                        
+                                        <c:otherwise>
+                                            something went wrong
+
+                                        </c:otherwise>
+                                        
+                                    </c:choose>
+                                    
+                                    
+                                    
+                                    
+                                    <c:set var="j" scope="session" value="${j+1}"/>
+                                </c:forEach>    
+                            </div>
+                            
+                            
+                            
                         </div>
                         
                     </div>

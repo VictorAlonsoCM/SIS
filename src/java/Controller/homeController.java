@@ -36,7 +36,7 @@ public class homeController {
     }
     
     private String[] getTypes(){
-        String[] lst = new String[]{"Ambulancia","Policia","Paramedicos"};
+        String[] lst = new String[]{"Ambulancia","Policia","Bomberos"};
         return lst;
     }
     
