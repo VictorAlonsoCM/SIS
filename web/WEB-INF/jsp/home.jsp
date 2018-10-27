@@ -52,7 +52,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="historialIncidentes.htm">
                 <div class="menuItem">
                     <div class="col-sm-1 iconDiv">
                             <i class="fas fa-history fa-4x historyIcon"></i>

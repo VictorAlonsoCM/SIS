@@ -19,6 +19,11 @@ public class Incidente {
     private int operador_id;
     private String vehiculo_id;
 
+    public Incidente() {
+    }
+    
+    
+
     public Incidente(double latitud, double longitud, String descripcion,  int operador_id, String vehiculo_id) {
         this.latitud = latitud;
         this.longitud = longitud;

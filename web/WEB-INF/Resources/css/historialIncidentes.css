@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/10/2018, 08:21:57 PM
+    Author     : eherd
+*/
+
+.FiltroBusqueda, .tablaHistorial{
+    border: 3px solid black;
+    margin: 1em;
+    padding:1em;
+}
+
+.filtroContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fila-1{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.columna{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.w3-container,.w3-panel{
+    margin-bottom: 1em;
+        
+}
+
+.btn-form{
+    width: available;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.w3-table-all{
+    border-collapse:collapse;
+    border-spacing:0;
+    width:100%;
+    display:table
+}
+
+.w3-table-all{
+    border:1px solid #ccc
+}
+
+.w3-bordered tr,.w3-table-all tr{
+    border-bottom:1px solid #ddd
+}
+
+.w3-striped tbody tr:nth-child(even){
+    background-color:#f1f1f1
+}
+
+.w3-table-all tr:nth-child(odd){
+    background-color:#fff
+}
+
+.w3-table-all tr:nth-child(even){
+    background-color:#f1f1f1
+}
+
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{
+    background-color:#ccc
+}
+
+.w3-centered tr th,.w3-centered tr td{
+    text-align:center
+}
+
+.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{
+    padding:8px 0px;
+    display:table-cell;
+    text-align:left;
+    vertical-align:top
+}
+
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{
+    padding-left:16px
+}
+
+.w3-red,.w3-hover-red:hover{
+    color:#fff!important;
+    background-color:#f44336!important
+}
