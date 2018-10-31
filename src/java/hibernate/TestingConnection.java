@@ -32,13 +32,13 @@ public class TestingConnection {
 //        inc.getPersona().setEdad("22");
 //        inc.getPersona().setTelefono("4129012");
 
-        Vehiculo ve = new Vehiculo();
-        ve.setNiv("4");
-        ve.setTipo("Policia");
-        ve.setSeriegps("calandoesto");
-        ve.setStatus(Boolean.TRUE);
-        ve.getDispositivoMovil().setImei("insvehi4");
-        ve.getDispositivoMovil().setNumeroTelefonico("1111111111");
+//        Vehiculo ve = new Vehiculo();
+//        ve.setNiv("4");
+//        ve.setTipo("Policia");
+//        ve.setSeriegps("calandoesto");
+//        ve.setStatus(Boolean.TRUE);
+//        ve.getDispositivoMovil().setImei("insvehi4");
+//        ve.getDispositivoMovil().setNumeroTelefonico("1111111111");
         
         
 //        Vehiculo v2 = (Vehiculo) session.load(Vehiculo.class, "testingRelationship111");
@@ -46,7 +46,7 @@ public class TestingConnection {
 //        System.out.println("Vehiculo recuperado:"+ v2.getDispositivoMovil().getImei());
 //        System.out.println("Vehiculo recuperado:"+ v2.getDispositivoMovil().getNumeroTelefonico());
         
-        session.save(ve);
+        //session.save(ve);
         
         //sql insert
         //session.save(user);

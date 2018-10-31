@@ -201,7 +201,7 @@
         
         <div id="AsociacionModal" class="asociacionModalClass">
                 <div class="asociacionModal-content">
-                    <form:form action="#" commandName="relacion" id="vehiculo-form" method="POST">
+                    <form:form action="relacionarVehCel.htm" commandName="relacion" id="vehiculo-form" method="POST">
                     <div class="form-content">
                         
                         <div class="">

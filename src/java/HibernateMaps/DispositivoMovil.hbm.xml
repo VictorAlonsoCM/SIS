@@ -47,6 +47,6 @@ Contributor(s):
       </id>
       <property name="numeroTelefonico" type="java.lang.String" column="numero_telefonico" />
       <!-- constrained=true allows only one valide Vehiculo -->
-      <one-to-one name="vehiculo" class="Entity.Vehiculo" constrained="true" />
+<!--      <one-to-one name="vehiculo" class="Entity.Vehiculo" constrained="true" />-->
   </class>
 </hibernate-mapping>

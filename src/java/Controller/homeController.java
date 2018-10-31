@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Entity.DispositivoMovil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import Entity.Vehiculo;
@@ -79,11 +80,7 @@ public class homeController {
     @RequestMapping(value="/registrarVehiculo.htm", method = RequestMethod.POST)
     public ModelAndView insertVehiculo(@ModelAttribute("command") Vehiculo nuevoVehiculo){
         String url = "redirect:/home.htm?success=";
-        
         Vehiculo ve = nuevoVehiculo;
-        
-        
-        
         Session session = HibernateUtilities.getSessionFactory().openSession();
         try{
             session.beginTransaction();
@@ -93,6 +90,42 @@ public class homeController {
             url+="0";
         }catch(HibernateException ex){
             System.out.println("There was a problem while inserting Vehiculo. \nProblem Message:"+ex.getMessage());
+            url+="1";
+        }
+        
+        ModelAndView mav = new ModelAndView(url);
+        return mav;
+    }
+    
+    @RequestMapping(value="/relacionarVehCel.htm", method=RequestMethod.POST)
+    public ModelAndView relacionarVehiculoCel(@ModelAttribute("relacion") Vehiculo_DispositivoMovil relacion ){
+        String url = "redirect:/home.htm?success=";
+        Vehiculo ve = new Vehiculo();
+        DispositivoMovil dm;
+        
+        Session session = HibernateUtilities.getSessionFactory().openSession();
+        try{
+            
+            session.beginTransaction();
+            ve = (Vehiculo) session.load(Vehiculo.class, relacion.getVehiculo_niv());
+            session.getTransaction().commit();
+            
+            ve.setDispositivoMovil_imei(relacion.getDispositivoMovil_imei());
+            dm = new DispositivoMovil(relacion.getDispositivoMovil_imei() , relacion.getNumeroTelefonico());
+            
+            session.beginTransaction();
+            
+            session.update(ve);
+            session.save(dm);
+            
+            session.getTransaction().commit();
+            
+            
+            
+            session.close();
+            url+="0";
+        }catch(HibernateException ex){
+            System.out.println("There was a problem while inserting Vehiculo and telefono. \nProblem Message:"+ex.getMessage());
             url+="1";
         }
         

@@ -12,7 +12,7 @@ package Entity;
 public class DispositivoMovil {
     private String imei;
     private String numeroTelefonico;
-    private Vehiculo vehiculo;
+    //private Vehiculo vehiculo;
 
     
     
@@ -25,13 +25,13 @@ public class DispositivoMovil {
         this.numeroTelefonico = numeroTelefonico;
     }
     
-    public Vehiculo getVehiculo() {
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
-    }
+//    public Vehiculo getVehiculo() {
+//        return vehiculo;
+//    }
+//
+//    public void setVehiculo(Vehiculo vehiculo) {
+//        this.vehiculo = vehiculo;
+//    }
     
     
 

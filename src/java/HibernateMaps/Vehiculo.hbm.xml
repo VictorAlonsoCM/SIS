@@ -66,6 +66,6 @@ Contributor(s):
           <column name="dispositivomovil_imei" />
       </property>
       
-      <one-to-one name="dispositivoMovil" class="Entity.DispositivoMovil" cascade="save-update"/>
+<!--      <one-to-one name="dispositivoMovil" class="Entity.DispositivoMovil" cascade="save-update"/>-->
   </class>
 </hibernate-mapping>
