@@ -14,7 +14,7 @@ public class Vehiculo {
     private String tipo;
     private String placa;
     private String seriegps;
-    private Boolean status;
+    private boolean status;
     private String dispositivoMovil_imei;
     //private DispositivoMovil dispositivoMovil;
 
@@ -81,7 +81,7 @@ public class Vehiculo {
         this.seriegps = seriegps;
     }
 
-    public Boolean getStatus() {
+    public boolean getStatus() {
         return status;
     }
 

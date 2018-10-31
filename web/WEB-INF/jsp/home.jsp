@@ -150,6 +150,7 @@
 
                                 <div class="col-md-11">
                                     <form:input path="seriegps" class="form-control" required="true" />
+                                    <form:checkbox path="status" class="form-control" style="display:none;" />
                                 </div>
 
                             </div>
@@ -173,7 +174,7 @@
                     <h3>Registrar vehículo de emergencia</h3>
                     <hr>
                     <div class="form-group">
-                        <h3> ¡Vehículo de emergencia registrado satisfactoriamente! </h3>
+                        <h3> ¡Vehículode emergencia registrado satisfactoriamente! </h3>
                     </div>
                     <div clas="form-btns-success">
                         <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
@@ -188,7 +189,7 @@
                     <h3>Registrar vehículo de emergencia</h3>
                     <hr>
                     <div class="form-group">
-                        <h3> Hubo un error al insertar el vehículo en la base </h3>
+                        <h3> Hubo un error al insertar el vehículo </h3>
                     </div>
                     <div clas="form-btns-success">
                         <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
@@ -254,8 +255,40 @@
                     </div>
 
                 </form:form>
+            </div>
+        </div>
+        
+        <c:if test="${success==2}">
+            <div id="successVModal" class="successVInserted">
+                <div class="successVInserted-content">
+                    <h3>Asociación entre vehículo y dispositivo móvil</h3>
+                    <hr>
+                    <div class="form-group">
+                        <h3> ¡Datos actualizados satisfactoriamente! </h3>
+                    </div>
+                    <div clas="form-btns-success">
+                        <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
+                    </div>
                 </div>
             </div>
+        </c:if>
+        
+        <c:if test="${success==3}">
+            <div id="successVModal" class="successVInserted">
+                <div class="successVInserted-content">
+                    <h3>Asociación entre vehículo y dispositivo móvil</h3>
+                    <hr>
+                    <div class="form-group">
+                        <h3> Hubo un error al realizar la asociación </h3>
+                    </div>
+                    <div clas="form-btns-success">
+                        <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        
+            
         
         
     </body>

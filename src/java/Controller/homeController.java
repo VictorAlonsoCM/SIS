@@ -22,6 +22,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
 
 /**
@@ -43,7 +45,7 @@ public class homeController {
         mav.addObject("types",lst);
         mav.addObject("success",success);
         mav.addObject("relacion",rel);
-            mav.addObject("avImeis",imeis);
+        mav.addObject("avImeis",imeis);
 
         return mav;
     }
@@ -79,29 +81,35 @@ public class homeController {
     
     @RequestMapping(value="/registrarVehiculo.htm", method = RequestMethod.POST)
     public ModelAndView insertVehiculo(@ModelAttribute("command") Vehiculo nuevoVehiculo){
+        ModelAndView mav = new ModelAndView();
         String url = "redirect:/home.htm?success=";
         Vehiculo ve = nuevoVehiculo;
         Session session = HibernateUtilities.getSessionFactory().openSession();
+        String message;
         try{
             session.beginTransaction();
             session.save(ve);
             session.getTransaction().commit();
             session.close();
+            message="¡Vehículo de emergencia registrado satisfactoriamente!";
             url+="0";
         }catch(HibernateException ex){
             System.out.println("There was a problem while inserting Vehiculo. \nProblem Message:"+ex.getMessage());
             url+="1";
+            message="Hubo un error al insertar el vehículo en la base";
         }
         
-        ModelAndView mav = new ModelAndView(url);
+        mav.setViewName(url);
+
         return mav;
     }
     
     @RequestMapping(value="/relacionarVehCel.htm", method=RequestMethod.POST)
     public ModelAndView relacionarVehiculoCel(@ModelAttribute("relacion") Vehiculo_DispositivoMovil relacion ){
         String url = "redirect:/home.htm?success=";
-        Vehiculo ve = new Vehiculo();
+        Vehiculo ve;
         DispositivoMovil dm;
+        RedirectAttributes redirectAttributes;
         
         Session session = HibernateUtilities.getSessionFactory().openSession();
         try{
@@ -114,20 +122,18 @@ public class homeController {
             dm = new DispositivoMovil(relacion.getDispositivoMovil_imei() , relacion.getNumeroTelefonico());
             
             session.beginTransaction();
-            
             session.update(ve);
             session.save(dm);
-            
             session.getTransaction().commit();
-            
-            
-            
+
             session.close();
-            url+="0";
+            url+="2";
         }catch(HibernateException ex){
             System.out.println("There was a problem while inserting Vehiculo and telefono. \nProblem Message:"+ex.getMessage());
-            url+="1";
+            url+="3";
         }
+        
+        
         
         ModelAndView mav = new ModelAndView(url);
         return mav;
