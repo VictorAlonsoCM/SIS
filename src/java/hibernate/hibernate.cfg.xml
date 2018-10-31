@@ -48,5 +48,9 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <mapping resource="HibernateMaps/Vehiculo.hbm.xml"/>
+    <mapping resource="HibernateMaps/Incidente.hbm.xml"/>
+    <mapping resource="HibernateMaps/Operador.hbm.xml"/>
+    <mapping resource="HibernateMaps/Persona.hbm.xml"/>
+    <mapping resource="HibernateMaps/DispositivoMovil.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

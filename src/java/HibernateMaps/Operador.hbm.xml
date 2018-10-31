@@ -40,32 +40,13 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class name="Entity.Vehiculo" table="vehiculo">
-      <id name="niv" type="java.lang.String">
-          <column name="niv"/>
-          <generator class="assigned"/>
+  <class name="Entity.Operador" table="operador">
+      <id name="id" type="int">
+          <column name="id" />
+          <generator class="identity"/>
       </id>
-      
-      <property name="tipo" type="java.lang.String">
-          <column name="Tipo" />
+      <property name="nombre" type="java.lang.String">
+          <column name="nombre"/>
       </property>
-      
-      <property name="placa" type="java.lang.String">
-          <column name="Placa" />
-      </property>
-      
-      <property name="seriegps" type="java.lang.String">
-          <column name="serie_gps" />
-      </property>
-      
-      <property name="status" type="boolean">
-          <column name="Estatus" />
-      </property>
-      
-      <property name="dispositivoMovil_imei" type="java.lang.String">
-          <column name="dispositivomovil_imei" />
-      </property>
-      
-      <one-to-one name="dispositivoMovil" class="Entity.DispositivoMovil" cascade="save-update"/>
   </class>
 </hibernate-mapping>

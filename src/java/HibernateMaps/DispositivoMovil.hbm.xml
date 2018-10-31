@@ -40,32 +40,13 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class name="Entity.Vehiculo" table="vehiculo">
-      <id name="niv" type="java.lang.String">
-          <column name="niv"/>
+  <class name="Entity.DispositivoMovil" table="dispositivomovil">
+      <id name="imei" type="java.lang.String">
+          <column name="imei"/>
           <generator class="assigned"/>
       </id>
-      
-      <property name="tipo" type="java.lang.String">
-          <column name="Tipo" />
-      </property>
-      
-      <property name="placa" type="java.lang.String">
-          <column name="Placa" />
-      </property>
-      
-      <property name="seriegps" type="java.lang.String">
-          <column name="serie_gps" />
-      </property>
-      
-      <property name="status" type="boolean">
-          <column name="Estatus" />
-      </property>
-      
-      <property name="dispositivoMovil_imei" type="java.lang.String">
-          <column name="dispositivomovil_imei" />
-      </property>
-      
-      <one-to-one name="dispositivoMovil" class="Entity.DispositivoMovil" cascade="save-update"/>
+      <property name="numeroTelefonico" type="java.lang.String" column="numero_telefonico" />
+      <!-- constrained=true allows only one valide Vehiculo -->
+      <one-to-one name="vehiculo" class="Entity.Vehiculo" constrained="true" />
   </class>
 </hibernate-mapping>

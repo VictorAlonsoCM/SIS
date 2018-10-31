@@ -12,10 +12,25 @@ package Entity;
 public class DispositivoMovil {
     private String imei;
     private String numeroTelefonico;
+    private Vehiculo vehiculo;
+
+    
+    
+    public DispositivoMovil(){
+         
+    }
 
     public DispositivoMovil(String imei, String numeroTelefonico) {
         this.imei = imei;
         this.numeroTelefonico = numeroTelefonico;
+    }
+    
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
     }
     
     

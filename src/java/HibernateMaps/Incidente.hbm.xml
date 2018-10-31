@@ -40,32 +40,32 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-mapping>
-  <class name="Entity.Vehiculo" table="vehiculo">
-      <id name="niv" type="java.lang.String">
-          <column name="niv"/>
-          <generator class="assigned"/>
+  <class name="Entity.Incidente" table="incidente">
+      <id name="id" type="int">
+          <column name="id"/>
+          <generator class="identity"/>
       </id>
       
-      <property name="tipo" type="java.lang.String">
-          <column name="Tipo" />
+      <property name="latitud" type="double">
+          <column name="latitud"/>
       </property>
       
-      <property name="placa" type="java.lang.String">
-          <column name="Placa" />
+      <property name="longitud" type="double">
+          <column name="longitud"/>
       </property>
       
-      <property name="seriegps" type="java.lang.String">
-          <column name="serie_gps" />
+      <property name="Descripcion" type="java.lang.String">
+          <column name="descripcion"/>
       </property>
       
-      <property name="status" type="boolean">
-          <column name="Estatus" />
+      <property name="fechaHora" type="java.sql.Timestamp">
+          <column name="fechahora"/>
       </property>
       
-      <property name="dispositivoMovil_imei" type="java.lang.String">
-          <column name="dispositivomovil_imei" />
+      <property name="persona_id" type="int">
+          <column name="persona_id"/>
       </property>
+     
       
-      <one-to-one name="dispositivoMovil" class="Entity.DispositivoMovil" cascade="save-update"/>
   </class>
 </hibernate-mapping>

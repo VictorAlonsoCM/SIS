@@ -15,9 +15,19 @@ public class Vehiculo {
     private String placa;
     private String seriegps;
     private Boolean status;
-    private String dispositivomovil_id;
+    private String dispositivoMovil_imei;
+
+    public String getDispositivoMovil_imei() {
+        return dispositivoMovil_imei;
+    }
+
+    public void setDispositivoMovil_imei(String dispositivoMovil_imei) {
+        this.dispositivoMovil_imei = dispositivoMovil_imei;
+    }
+    private DispositivoMovil dispositivoMovil;
     
     public Vehiculo(){
+        setDispositivoMovil(new DispositivoMovil());
     }
     
     public Vehiculo(String niv, String tipo, String seriegps, Boolean status) {
@@ -27,13 +37,16 @@ public class Vehiculo {
         this.status = status;
     }
 
-    public String getDispositivomovil_id() {
-        return dispositivomovil_id;
+    public DispositivoMovil getDispositivoMovil() {
+        return dispositivoMovil;
     }
 
-    public void setDispositivomovil_id(String dispositivomovil_id) {
-        this.dispositivomovil_id = dispositivomovil_id;
+    public void setDispositivoMovil(DispositivoMovil dispositivoMovil) {
+        this.dispositivoMovil = dispositivoMovil;
+        dispositivoMovil.setVehiculo(this);
     }
+
+    
     
     public String getNiv() {
         return niv;

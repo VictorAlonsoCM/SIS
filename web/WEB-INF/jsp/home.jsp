@@ -33,10 +33,8 @@
 
     <body>
         <div class="col-md-12 title">
-        <h4>DESPACHO DE VEHÍCULOS CON GPS QUE ATIENDEN EMERGENCIAS</h4>
+        <h3>DESPACHO DE VEHÍCULOS CON GPS QUE ATIENDEN EMERGENCIAS</h3>
         </div>
-        
-        <a href="registerPage.htm">Go to another page!</a>
 
         <div class="menu">
             <a href="registerPage.htm">
@@ -65,7 +63,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="#" onclick="showAsociacion()">
                 <div class="menuItem">
                     <div class="col-sm-1 iconDiv">
                         <i class="fas fa-cog fa-4x  settingIcon"></i>
@@ -169,7 +167,7 @@
             </div>
         </div>
         
-        <c:if test="${success}">
+        <c:if test="${success==0}">
             <div id="successVModal" class="successVInserted">
                 <div class="successVInserted-content">
                     <h3>Registrar vehículo de emergencia</h3>
@@ -183,6 +181,81 @@
                 </div>
             </div>
         </c:if>
+        
+        <c:if test="${success==1}">
+            <div id="successVModal" class="successVInserted">
+                <div class="successVInserted-content">
+                    <h3>Registrar vehículo de emergencia</h3>
+                    <hr>
+                    <div class="form-group">
+                        <h3> Hubo un error al insertar el vehículo en la base </h3>
+                    </div>
+                    <div clas="form-btns-success">
+                        <button type="buton" class="btn btn-primary" onclick="hideModalVSuccess()" >Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </c:if>
+        
+        <!--div id="AsociacionModal"  -->
+        
+        <div id="AsociacionModal" class="asociacionModalClass">
+                <div class="asociacionModal-content">
+                    <form:form action="#" commandName="relacion" id="vehiculo-form" method="POST">
+                    <div class="form-content">
+                        
+                        <div class="">
+                            <h3>Configurar Asociación</h3>
+                        </div>
+                        <hr size="2" class="title-line"/>
+                        
+                        <h4>NIV del vehículo de emergencia</h4>
+                        
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <form:label path="vehiculo_niv">NIV</form:label>
+                                </div>
+                                
+                                <div class="col-md-11">
+                                <form:select path="vehiculo_niv" class="form-control" items="${avImeis}"/>
+                                </div>    
+                            </div>
+
+                        </div>
+                                
+                        <h4>Datos del nuevo dispositivo móvil</h4>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <form:label path="dispositivoMovil_imei">IMEI</form:label>
+                                </div>
+
+                                <div class="col-md-11">
+                                    <form:input path="dispositivoMovil_imei" class="form-control"  />
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <form:label path="numeroTelefonico">Numero Telefónico</form:label>
+                                </div>
+
+                                <div class="col-md-11">
+                                    <form:input path="numeroTelefonico" class="form-control"  />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-btns">
+                        <button type="button" onclick="hideAsociacion()" class="btn btn-danger">Cancelar</button>
+                        <button type="submit" id="RegisterVehiculo" onclick="changeToLoading()" class="btn btn-primary">Aceptar</button>
+                    </div>
+
+                </form:form>
+                </div>
+            </div>
         
         
     </body>

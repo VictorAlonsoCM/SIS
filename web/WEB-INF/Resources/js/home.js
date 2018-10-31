@@ -27,3 +27,13 @@ function hideModalVSuccess(){
     var modal = document.getElementById("successVModal");
     modal.style.display="none";
 }
+
+function showAsociacion(){
+    var modal = document.getElementById("AsociacionModal");
+    modal.style.display="block";
+}
+
+function hideAsociacion(){
+    var modal = document.getElementById("AsociacionModal");
+    modal.style.display="none";
+}

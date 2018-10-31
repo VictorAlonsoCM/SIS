@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Entity;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 /**
  *
@@ -15,25 +15,28 @@ public class Incidente {
     private double latitud;
     private double longitud;
     private String descripcion;
-    private String fechaHora;
-    private int operador_id;
-    private String vehiculo_id;
+    private Timestamp fechaHora;
+    private int persona_id;
+    private Persona persona;
 
     public Incidente() {
     }
     
-    
+    public Persona getPersona() {
+        return persona;
+    }
 
-    public Incidente(double latitud, double longitud, String descripcion,  int operador_id, String vehiculo_id) {
-        this.latitud = latitud;
-        this.longitud = longitud;
-        this.descripcion = descripcion;
-        //this.fechaHora = fechaHora;
-        this.operador_id = operador_id;
-        this.vehiculo_id = vehiculo_id;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
     
-    
+    public int getPersona_id() {
+        return persona_id;
+    }
+
+    public void setPersona_id(int persona_id) {
+        this.persona_id = persona_id;
+    }
 
     public int getId() {
         return id;
@@ -67,29 +70,15 @@ public class Incidente {
         this.descripcion = descripcion;
     }
 
-    public String getFechaHora() {
+    public Timestamp getFechaHora() {
         return fechaHora;
     }
 
-    public void setFechaHora(String fechaHora) {
+    public void setFechaHora(Timestamp fechaHora) {
         this.fechaHora = fechaHora;
     }
 
-    public int getOperador_id() {
-        return operador_id;
-    }
 
-    public void setOperador_id(int operador_id) {
-        this.operador_id = operador_id;
-    }
-
-    public String getVehiculo_id() {
-        return vehiculo_id;
-    }
-
-    public void setVehiculo_id(String vehiculo_id) {
-        this.vehiculo_id = vehiculo_id;
-    }
     
     
     
