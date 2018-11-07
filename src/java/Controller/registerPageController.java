@@ -36,9 +36,9 @@ public class registerPageController {
     
     private List<Vehiculo> getAvailableVehicle(){
         List<Vehiculo> vehiculos = new ArrayList<>();
-        
+    
         Session session = HibernateUtilities.getSessionFactory().openSession();
-        
+    
         try{
             session.beginTransaction();
             //Getting all the availables vehicles, converting the Criteria object in a list.

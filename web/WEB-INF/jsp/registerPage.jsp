@@ -46,7 +46,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-                                    <div id="map"></div>
+                                  <div id="map"></div>
                                 </div>
                                 <div class="col-md-6">
                                     <p>Ingresa datos de la persona a reportar el incidente:</p>
