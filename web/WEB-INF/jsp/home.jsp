@@ -92,7 +92,7 @@
         
         <div id="vehiculoModal" class="modal-form-vehiculo">
             <div class="modal-content">
-                <form:form action="registrarVehiculo.htm" id="vehiculo-form" method="POST">
+                <form:form action="registrarVehiculo.htm"  id="vehiculo-form" method="POST">
                     <div class="form-content">
                         
                         <div class="">

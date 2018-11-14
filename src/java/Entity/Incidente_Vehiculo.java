@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Entity;
-
+import java.sql.Timestamp;
 /**
  *
  * @author eherd
@@ -13,7 +13,25 @@ package Entity;
  */
 public class Incidente_Vehiculo {
     private int incidente_id;
-    private int vehiculo_niv;
+    private String vehiculo_niv;
+    private int id;
+    private Timestamp createdAt;
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Incidente_Vehiculo() {
     }
@@ -26,11 +44,11 @@ public class Incidente_Vehiculo {
         this.incidente_id = incidente_id;
     }
 
-    public int getVehiculo_niv() {
+    public String getVehiculo_niv() {
         return vehiculo_niv;
     }
 
-    public void setVehiculo_niv(int vehiculo_niv) {
+    public void setVehiculo_niv(String vehiculo_niv) {
         this.vehiculo_niv = vehiculo_niv;
     }
     

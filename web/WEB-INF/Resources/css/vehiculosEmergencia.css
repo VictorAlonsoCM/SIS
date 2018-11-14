@@ -13,10 +13,10 @@ and open the template in the editor.
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: auto;
-    height: 300px;
+    height: auto;
 }
 
-.tab button {
+.tab a {
     display: block;
     background-color: inherit;
     color: black;
@@ -29,12 +29,12 @@ and open the template in the editor.
     transition: 0.3s;
 }
 
-.tab button:hover {
+.tab a:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+.tab a.active {
     background-color: #ccc;
 }
 

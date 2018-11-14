@@ -94,3 +94,9 @@ and open the template in the editor.
     color:#fff!important;
     background-color:#f44336!important
 }
+
+.row-flex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -82,19 +82,14 @@
                         
                         <div role="tabpanel" class="tab-pane" id="vehiculosDeEmergencia">
                             <div class="map col-md-5">
-                                
+                                <div id="mapRoutes"></div>
                             </div>
                             
-                            
-                           
                             <div class="chatDescription col-md-5">
                                 <div class="descIncd">
                                     <h3>Descripción del Incidente</h3>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                        Praesent magna lectus, mollis et feugiat a, lobortis at sem. 
-                                        Integer risus est, dapibus non sollicitudin quis, interdum vitae quam. 
-                                        Donec non sem eu odio euismod venenatis
+                                        
                                     </p>
                                 </div>
                                 <div class="chat">
@@ -112,41 +107,29 @@
                                 <c:forEach items="${vehiculosActivos}" var="vehiculo">
                                     
                                     <c:choose>
-                                        
                                         <c:when test="${vehiculo.tipo=='Ambulancia' }" >
                                             <c:set var="nAmbulancia" scope="session" value="${nAmbulancia+1}"/>
-                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nAmbulancia} </button>
+                                            
+                                            <a class="tablinks" href="testing?niv=${vehiculo.niv}">${vehiculo.tipo} ${nAmbulancia}</a>
+                                            
                                         </c:when>
                                             
                                         <c:when test="${vehiculo.tipo=='Policia' }">
                                             <c:set var="nPolicia" scope="session" value="${nPolicia+1}"/>
-                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nPolicia} </button>
+                                            <a class="tablinks" href="testing?niv=${vehiculo.niv}">${vehiculo.tipo} ${nPolicia}</a>
                                         </c:when>
                                             
                                         <c:when test="${vehiculo.tipo == 'Bomberos' }">
                                             <c:set var="nBombero" scope="session" value="${nBombero+1}"/>
-                                            <button onclick="" clas="tablinks">${vehiculo.tipo} ${nBombero} </button>
+                                            <a class="tablinks" href="testing?niv=${vehiculo.niv}">${vehiculo.tipo} ${nBombero} </a>
                                         </c:when>
-                                            
-                                        
-                                        
-                                        
                                         <c:otherwise>
                                             something went wrong
-
                                         </c:otherwise>
-                                        
                                     </c:choose>
                                     
-                                    
-                                    
-                                    
-                                    <c:set var="j" scope="session" value="${j+1}"/>
                                 </c:forEach>    
-                            </div>
-                            
-                            
-                            
+                            </div>  
                         </div>
                         
                     </div>

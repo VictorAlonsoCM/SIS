@@ -37,7 +37,7 @@
                 
                 <div class="fila-1">
 
-                    <div class="row col-md-6">
+                    <div class="row col-md-6 row-flex">
                         <div class="col-md-1">
                             <label name="Fecha">Fecha</label>
                         </div>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     
-                    <div class="row col-md-6">
+                    <div class="row col-md-6 row-flex">
                         <div class="col-md-2">
                             <label name="tipo">Tipo de vehículo</label>
                         </div>
@@ -67,7 +67,7 @@
                 
                 <div class="fila-1">
                     
-                    <div class="row col-md-6">
+                    <div class="row col-md-6 row-flex">
                         <div class="col-md-1">
                             <label name="IMEI">IMEI</label>
                         </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     
-                    <div class="row col-md-6">
+                    <div class="row col-md-6 row-flex">
                         <div class="col-md-1">
                             <label name="NIV">NIV</label>
                         </div>

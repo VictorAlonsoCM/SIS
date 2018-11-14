@@ -88,9 +88,14 @@ public class homeController {
         String message;
         try{
             session.beginTransaction();
+            //acciones
+            
             session.save(ve);
+            
+            
             session.getTransaction().commit();
             session.close();
+            
             message="¡Vehículo de emergencia registrado satisfactoriamente!";
             url+="0";
         }catch(HibernateException ex){

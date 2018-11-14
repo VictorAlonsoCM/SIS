@@ -12,7 +12,7 @@ function initAutocomplete() {
     zoom: 14,
     mapTypeId: 'roadmap'
   });
-
+  
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
@@ -71,4 +71,13 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+  
+  
+  //Map for routes. Second tab
+  var mapRoutes = new google.maps.Map(document.getElementById('mapRoutes'),{
+        center: {lat: 19.2400444, lng: -103.7636274},
+        zoom: 14,
+        mapTypeId: 'roadmap'
+    })
+    
 }

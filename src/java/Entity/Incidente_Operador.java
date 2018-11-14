@@ -5,6 +5,8 @@
  */
 package Entity;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author eherd
@@ -12,7 +14,27 @@ package Entity;
 public class Incidente_Operador {
     private int incidente_id;
     private int operador_id;
+    private int id;
+    private Timestamp createdAt;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+    
+    
+    
     public Incidente_Operador() {
     }
 

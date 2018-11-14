@@ -25,7 +25,7 @@
                 <prop key="registrarVehiculo.htm">homeController</prop>
                 <prop key="relacionarVehCel.htm">homeController</prop>
                 <prop key="historialIncidentes.htm">historialIncidentes</prop>
-
+                <prop key="testing.htm/*">registerPageController</prop>
             </props>
         </property>
     </bean>
@@ -48,4 +48,5 @@
     <bean name="homeController" class="Controller.homeController" />
     <bean name="historialIncidentes" class="Controller.historialIncidentes" />
     <bean name="greetingController" class="Controller.GreetingController" />
+    <bean name="restController" class="REST.testREST" />
 </beans>
