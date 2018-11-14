@@ -21,6 +21,15 @@ public class Incidente {
 
     public Incidente() {
     }
+
+    public Incidente(double latitud, double longitud, String descripcion, Timestamp fechaHora) {
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.descripcion = descripcion;
+        this.fechaHora = fechaHora;
+    }
+    
+    
     
     public Persona getPersona() {
         return persona;

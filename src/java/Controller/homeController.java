@@ -46,6 +46,7 @@ public class homeController {
         mav.addObject("success",success);
         mav.addObject("relacion",rel);
         mav.addObject("avImeis",imeis);
+        mav.addObject("firstVehicle",registerPageController.getFirstWorkingVehicule());
 
         return mav;
     }

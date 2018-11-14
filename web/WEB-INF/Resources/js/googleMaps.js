@@ -13,6 +13,22 @@ function initAutocomplete() {
     mapTypeId: 'roadmap'
   });
   
+  var myMarker = new google.maps.Marker({
+      position: new google.maps.LatLng(19.2400444, -103.7636274),
+      draggable: true
+  });
+  
+  
+  
+  google.maps.event.addListener(myMarker, 'dragend', function(evt){
+     $("#lat").val(evt.latLng.lat().toFixed(3));
+     $("#long").val(evt.latLng.lng().toFixed(3));
+     console.log(evt.latLng.lat().toFixed(3));
+  });
+  
+  map.setCenter(myMarker.position);
+  myMarker.setMap(map);
+  
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
@@ -22,6 +38,8 @@ function initAutocomplete() {
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
   });
+  
+  
 
   var markers = [];
   // Listen for the event fired when the user selects a prediction and retrieve

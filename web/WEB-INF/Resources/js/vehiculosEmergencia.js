@@ -25,3 +25,8 @@ function abrirVehiculo(evt, vehiculo) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function hideModalISuccess(){
+    var incidentModal = document.getElementById("incidentModal");
+    incidentModal.style.display="none";
+}

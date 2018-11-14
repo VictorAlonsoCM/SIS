@@ -37,7 +37,7 @@
         </div>
 
         <div class="menu">
-            <a href="registerPage.htm">
+            <a href="registerPage.htm?niv=${firstVehicle.niv}">
                 <div class="menuItem">
                     <div class="col-sm-1 iconDiv">
                         <i class="fas fa-plus-square fa-4x incidentIcon"></i>

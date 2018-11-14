@@ -26,6 +26,7 @@
                 <prop key="relacionarVehCel.htm">homeController</prop>
                 <prop key="historialIncidentes.htm">historialIncidentes</prop>
                 <prop key="testing.htm/*">registerPageController</prop>
+                <prop key="registrarIncidente.htm">registerPageController</prop>
             </props>
         </property>
     </bean>
