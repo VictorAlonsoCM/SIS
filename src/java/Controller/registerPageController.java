@@ -108,6 +108,8 @@ public class registerPageController {
         return incidente;
     }
     
+    
+    //this method is executed when the user selects
     @RequestMapping(value="/registrarIncidente.htm", method=RequestMethod.POST)
     public ModelAndView registerIncident(@ModelAttribute("incidenteForm") Incidente_persona_form form){
         ModelAndView mav = new ModelAndView();
@@ -144,5 +146,27 @@ public class registerPageController {
         return mav;
     }
     
+    @RequestMapping(value="pastIncident.htm", method=RequestMethod.GET)
+    public ModelAndView goToPastIncident(@RequestParam("id") int incidente_id){
+        ModelAndView mav = new ModelAndView("pastIncident");
+        Incidente incidente = new Incidente();
+        Persona persona = new Persona();
+        
+        try{
+            Session session = HibernateUtilities.getSessionFactory().openSession();
+            session.beginTransaction();
+            incidente = (Incidente) session.get(Incidente.class, incidente_id);
+            persona = (Persona) session.get(Persona.class, incidente.getPersona_id());
+            session.getTransaction().commit();
+            session.close();
+        }catch(HibernateException ex){
+            System.out.println("There was an error \nError:"+ex.getMessage());
+        }
+        
+        mav.addObject("currentIncident",incidente);
+        mav.addObject("Person", persona);
+        
+        return mav;
+    }
     
 }

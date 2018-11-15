@@ -46,6 +46,7 @@
                         <div role="tabpanel" class="tab-pane active" id="registroDeIncidente">
                             <div class="row">
                                 <div class="col-md-6">
+                                    <h4>Buscar y colocar el marcador en el sitio del incidente</h4>
                                     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
                                   <div id="map"></div>
                                 </div>
@@ -55,15 +56,15 @@
                                         <div class="row">
                                             <div class="form-group col-sm-12">
                                               <form:label path="nombre_persona">Nombre:</form:label>
-                                              <form:input path="nombre_persona" class="form-control"  />
+                                              <form:input  path="nombre_persona" class="form-control"  />
                                             </div>
                                             <div class="form-group col-sm-8">
                                               <form:label path="telefono_persona">Teléfono:</form:label>
-                                              <form:input  path="telefono_persona"  class="form-control"  />
+                                              <form:input type="number" maxlength="10" path="telefono_persona"  class="form-control"  />
                                             </div>
                                             <div class="form-group col-sm-4">
                                               <form:label path="edad_persona">Edad:</form:label>
-                                              <form:input path="edad_persona"  class="form-control"  />
+                                              <form:input type="number" maxlength="2" path="edad_persona"  class="form-control"  />
                                             </div>
                                             <div class="form-group col-sm-12">
                                               <form:label path="descripcion_incidente">Descripción:</form:label>
